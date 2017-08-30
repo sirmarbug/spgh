@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+
+<head>
+    <title>SPGH - Scan Profil GitHub</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body ng-controller="ctrl">
+        <nav class="navbar navbar-default">
+                <div class="container">
+                  <!-- Brand and toggle get grouped for better mobile display -->
+                  <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                      <span class="sr-only">Toggle navigation</span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#!">SPGH</a>
+                  </div>
+              
+                  <!-- Collect the nav links, forms, and other content for toggling -->
+                  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                            <li>
+                                    <a href="#!">My Profil</a>
+                                </li>
+                                <li>
+                                    <a href="#!/search">Search Profil</a>
+                                </li>
+                                <li ng-show="login">
+                                    <a href="#">Git User: {{nicks}}</a>
+                                </li>
+                                <li ng-show="login" ng-click="logout()">
+                                    <a href="#">Logout</a>
+                                </li>
+                    </ul>
+                  </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+              </nav>
+
+
+
+    <!-- <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+        <div class="container">
+            
+            <a class="navbar-brand" href="#!">SPGH</a>
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="#!">My Profil</a>
+                </li>
+                <li>
+                    <a href="#!/search">Search Profil</a>
+                </li>
+                <li ng-show="login">
+                    <a href="#">Git User: {{nicks}}</a>
+                </li>
+                <li ng-show="login" ng-click="logout()">
+                    <a href="#">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav> -->
+
+    <div id="main">
+        <div ng-view=""></div>
+    </div>
+
+    
+    <nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+        <p class="text-center footer">
+            Created by <strong>Mariusz Bugajski</strong> v. 0.1
+        </p>
+    </nav>
+    
+
+    <!-- JS lib -->
+    <script src="assets/js/angular.js"></script>
+    <script src="assets/js/angular-route.js"></script>
+    <script src="assets/js/angular-cookies.js"></script>
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
+
+    <!-- App control file -->
+    <script src="app.mdl.js"></script>
+    <script src="app.rout.js"></script>
+    <script src="index.ctrl.js"></script>
+
+    <!-- Directive -->
+    <!-- <script src="/app/common/directive/profil/profil.ctrl.js"></script> -->
+    <script src="/app/common/directive/profil/profil.js"></script>
+
+    <!-- Service -->
+    <script src="/app/common/service/getGitHub.js"></script>
+
+    <!-- Controller -->
+    <script src="app/core/myProfil/myProfil.ctrl.js"></script>
+    <script src="app/core/searchProfil/searchProfil.ctrl.js"></script>
+</body>
+
+</html>

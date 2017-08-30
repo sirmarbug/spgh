@@ -1,0 +1,73 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 col-md-6 col-md-offset-3">
+                <div class="row">
+                        <div class="col-sm-12">
+                            <div class="row">
+                                <div class="col-sm-4 col-sm-offset-4">
+                                    <img src="{{db.avatar_url}}" class="img-responsive img-circle">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <h3 class="text-center"><strong>{{db.name}} ({{db.login}})</strong></h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <p class="text-center">Info</p>
+                        <div class="col-sm-12">
+                            <p><strong>Location: </strong>{{db.location}}</p>
+                            <p><strong>Company: </strong>{{db.company}}</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <p class="text-center">Bio</p>
+                        <div class="col-sm-12">
+                            <p class="text-center">{{db.bio}}</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <p class="text-center">Repo</p>
+                            <p class="text-center">{{db.public_repos}}</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <p class="text-center">Followers</p>
+                            <p class="text-center">{{db.followers}}</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <p class="text-center">Following</p>
+                            <p class="text-center">{{db.following}}</p>
+                        </div>
+                        <!-- <a href=""><span class="glyphicon glyphicon-folder-open"></span></a> -->
+                        <!-- <a href=""><span class="glyphicon glyphicon-circle-arrow-up"></span></a> -->
+                        <!-- <a href=""><span class="glyphicon glyphicon-circle-arrow-down"></span></a> -->
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3 text-center">
+                            <a href="{{db.email}}">
+                                <h3 class="glyphicon glyphicon-envelope"></h3>
+                            </a>
+                        </div>
+                        <div class="col-sm-3 text-center">
+                            <a href="http://{{db.blog}}">
+                                <h3 class="glyphicon glyphicon-globe"></h3>
+                            </a>
+                        </div>
+                        <div class="col-sm-3 text-center">
+                            <a href="{{db.html_url}}">
+                                <h3 class="glyphicon glyphicon-user"></h3>
+                            </a>
+                        </div>
+                        <div class="col-sm-3 text-center">
+                            <a href="{{db.repos_url}}">
+                                <h3 class="glyphicon glyphicon-random"></h3>
+                            </a>
+                        </div>
+                    </div>
+        </div>
+    </div>
+    
+</div>
