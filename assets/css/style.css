@@ -1,3 +1,7 @@
+html, body {
+    background: #f2f0ed
+}
+
 .footer {
     margin: 15px;
 }
@@ -7,3 +11,41 @@
     margin-bottom: 50px;
 }
 
+h4 {
+    text-align: center;
+    border-bottom: solid 1px #cacaca;
+    color: #222;
+    font-weight: bold
+}
+
+h3, a, a:hover, a:active, a:focus {
+    color: #222
+}
+
+h5 {
+    font-size: 16px;
+    font-weight: bold
+}
+
+a,a:hover, a:active, a:focus {
+    text-decoration: none
+}
+
+.box {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: #fff;
+    border-radius: 15px;
+    border: solid 1px #cacaca;
+    /* box-shadow: 0 0 5 2 #000 */
+}
+
+.box-search {
+    margin-top: 20px;
+}
+
+.stat {
+    border-right: solid 1px #cacaca;
+}

@@ -32,6 +32,8 @@
             if ($scope.nick != null) {
                 $scope.showMyProfil = true;
                 $scope.showRegister = false;
+                $rootScope.nicks = $cookies.get('nick');
+                $rootScope.login = true;
                 getGitHub.getProfil($scope.nick).then(function (res) {
                     console.log(res.data);
                     $scope.database = res.data;
