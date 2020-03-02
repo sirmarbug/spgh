@@ -49,3 +49,7 @@ a,a:hover, a:active, a:focus {
 .stat {
     border-right: solid 1px #cacaca;
 }
+
+.jumbotron {
+    background-color: inherit;
+}
