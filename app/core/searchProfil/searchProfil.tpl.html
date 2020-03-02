@@ -1,8 +1,8 @@
 <div class="container page">
-    <!-- <div class="alert alert-danger" ng-show="show.error">
+    <div class="alert alert-danger" ng-if="show.error">
         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-        <h2 class="text-center">Not Found</h2>
-    </div> -->
+        <h2 class="text-center">{{ show.errorMessage }}</h2>
+    </div>
 
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">

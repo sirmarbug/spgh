@@ -13,8 +13,9 @@
 
         function activate() {
             $scope.show = {
-                "error": false,
-                "profil": false
+                error: false,
+                errorMessage: '',
+                profil: false
             };
 
             $scope.nick = $cookies.get('nick');
@@ -32,7 +33,10 @@
                         $scope.show.profil = true;
                         $scope.show.error = false;
                     }
-                });
+                }).catch(function(e){
+                    $scope.show.error = true;
+                    $scope.show.errorMessage = e.statusText;
+                 });
             }
         }
     }
