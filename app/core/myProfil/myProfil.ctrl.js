@@ -13,6 +13,8 @@
 
         function activate() { 
             $scope.showMyProfil = $cookies.get('showMyProfil');
+            $scope.showError = false;
+            $scope.errorMessage = '';
             
             if ($scope.showMyProfil === 'false') {
                 $scope.showMyProfil = false;
@@ -35,22 +37,28 @@
                 $rootScope.nicks = $cookies.get('nick');
                 $rootScope.login = true;
                 getGitHub.getProfil($scope.nick).then(function (res) {
-                    console.log(res.data);
                     $scope.database = res.data;
+                }).catch(function (e) {
+                    $scope.showError = true;
+                    $scope.errorMessage = e.statusText;
                 });
             }
 
             $scope.saveUser = function () {
-                $scope.showMyProfil = true;
-                $scope.showRegister = false;
-                $cookies.put('showMyProfil', true);
-                $cookies.put('showRegister', false);
-                $cookies.put('nick', $scope.nick);
                 getGitHub.getProfil($scope.nick).then(function (res) {
-                    console.log(res.data);
+                    $scope.showError = false;
+                    $scope.errorMessage = '';
+                    $cookies.put('showMyProfil', true);
+                    $cookies.put('showRegister', false);
+                    $cookies.put('nick', $scope.nick);
+                    $scope.showMyProfil = true;
+                    $scope.showRegister = false;
                     $scope.database = res.data;
                     $rootScope.nicks = res.data.login;
                     $rootScope.login = true;
+                }).catch(function (e) {
+                    $scope.showError = true;
+                    $scope.errorMessage = e.statusText;
                 });
             }
         }
