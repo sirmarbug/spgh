@@ -25,6 +25,10 @@
                 $rootScope.login = true;
             }
 
+            $scope.enterPress = function (keyEvent) {
+                if (keyEvent.which === 13) $scope.loadUser();
+            };
+
             $scope.loadUser = function () {
                 $scope.database = null;
                 getGitHub.getProfil($scope.search).then(function (res) {

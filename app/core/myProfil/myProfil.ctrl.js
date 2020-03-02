@@ -61,6 +61,10 @@
                     $scope.errorMessage = e.statusText;
                 });
             }
+
+            $scope.enterPress = function (keyEvent) {
+                if (keyEvent.which === 13) $scope.saveUser();
+            };
         }
     }
 })();
